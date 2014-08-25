@@ -1,0 +1,48 @@
+Tiempos de ejecuci—n practica Threads:
+-------------------------------------
+1) 
+
+a) Sin sleep (con Runnable)
+Thread: 1
+Thread: 3
+Thread: 2
+Thread: 4
+Thread: 0
+
+b) Con sleep random entre 0 y 4 segundos (con Runnable)
+
+Thread: 1
+Thread: 4
+Thread: 0
+Thread: 2
+Thread: 3
+
+c) Con PrintThread.java 
+
+Thread: 0
+Thread: 2
+Thread: 4
+Thread: 3
+Thread: 1
+
+No note ninguna diferencia. En uno creas un Thread con un runnable y el otro directamente lo arrancas.
+Aunque tiene mas sentido utilizar Runnable's ya que uno no esta extendiendo ninguna funcion de la 
+clase Thread, sino que la utiliza, y tiene mejor sentido utilzar Runnable's bajo el paradigma de objetos.
+
+2)
+
+Sin nada.
+
+Contador: 3000
+Contador: 3000
+Contador: 4000
+Contador: 3783
+
+No es lo esperado, en muchos casos aparece 3000, puede que 1 de cada 4 hacen el acceso en simultaneo y 
+la variable no cambia su valor real.
+
+
+Contador: 4000
+ Ahora si es lo esperado.
+ 
+ 
